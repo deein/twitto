@@ -1,0 +1,23 @@
+{
+  "name": "your-best-practice",
+  "version": "1.0.0",
+  "description": "welcome to your best practice project",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "~3.3.5"
+  },
+  "keywords": [
+    "best",
+    "pratice"
+  ],
+  "authors": [
+    "deein"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

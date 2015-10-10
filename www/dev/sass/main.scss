@@ -1,0 +1,10 @@
+// Depandencies
+@import 'compass';
+// Variables
+@import 'variables';
+// Bootstrap
+@import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+// Desktop
+@import 'home';
+// Responsives
+@import '_home-responsive'
