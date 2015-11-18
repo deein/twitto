@@ -15,10 +15,13 @@ require.config({
     },
     paths: {
         'jquery': 'jquery',
-        'bootstrap': 'bootstrap'
+        'bootstrap': 'bootstrap',
+        'angular': 'angular',
+        'angular-resource': 'angular-resource',
+        'lodash': 'lodash'
     }
 });
-require(['jquery', 'bootstrap'], function(jQuery) {
+require(['jquery', 'bootstrap', 'angular', 'angular-resource', 'lodash'], function(jQuery) {
     jQuery(function() {
         jQuery(document).ready(function() {
 			console.log('It works !');

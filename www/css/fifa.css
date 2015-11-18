@@ -1,0 +1,169 @@
+#widget {
+  position:absolute;
+  float:left;
+  width: 40%;
+  overflow: hidden;
+  padding:20px;
+
+}
+
+#widget li{
+  box-shadow: 10px 10px 5px rgba(0,0,0,.1);
+}
+
+/*
+** GENERAL
+*/
+
+html, body{
+  height:100%;
+}
+
+body {
+  background: rgb(0, 0,255);
+  color: rgb(240, 230, 245);
+  font-family: 'Gotham', sans-serif;
+  font-weight:200;
+  background: url('../images/bg-fifa.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bgTriangle{
+    position:fixed;
+    width:614px;
+    margin-left:-394px;
+    left:50%;
+    height:100%;
+}
+
+.pip-wrapper{
+  position:fixed;
+  width: 60%;
+  left:40%;
+  overflow:hidden;
+  display:flex;
+  align-items:center;
+  flex-flow: row wrap;
+  height:100%;
+}
+
+.pip{
+  position: relative;
+  margin:0 auto;
+  width:1000px;
+  height:563px;
+  border:1px solid black;
+  display:flex;
+  flex-flow: row wrap;
+  align-items:center;
+  text-align:center;
+  background:black;
+  box-shadow: 0px 0px 5px rgba(0,0,0,1);
+}
+
+.hashtag{
+  width:100%;
+  text-align:center;
+  margin-top:-300px;
+}
+
+.pip #controls{
+  width:100%;
+}
+
+.pip #stop{
+  width:100%;
+}
+
+.pip #showBanned{
+  width:100%;
+}
+
+/*
+** TWEET
+*/
+
+.tweet {
+  position:relative;
+  background: rgb(255, 255, 255);
+  margin-bottom: 10px;
+  padding: 10px 20px 10px 20px;
+  margin:10px;    
+}
+
+/*
+** USER
+*/
+
+.user{
+
+    padding-top: 15px;  
+}
+
+  .user-name {
+      color: #737373;
+    font-size: 1em;
+    font-weight:400;
+  }
+
+  .user-screen-name {
+    display: block;
+    font-size: 0.8em;
+    font-weight: 300;
+    color: #a5a5a5;
+  }
+
+  .user-profile-image {
+    float: left;
+    margin-top: -8px;
+    border-radius: 3px;
+    margin-right: 7px;
+  }
+
+/*
+** CONTENT
+*/
+
+.content {
+    font-size: 0.9em;
+    color: #a5a5a5;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  line-height:1.2em;
+    font-weight: 300;
+}
+  .content a {
+    color: rgb(35, 98, 137);
+    text-decoration: none;
+  }
+
+.media-img {
+  margin-top: 15px;
+  width: 100%;
+  border-radius: 3px;
+}
+
+/*
+** META-DATA
+*/
+
+.when {
+  position:absolute;
+  top: 25px;
+  right: 20px;
+  text-align: right;
+    color: #a5a5a5;
+    font-weight: 300;
+    font-size: 0.8em;
+}
+
+.fav, .rt {
+  display: inline;
+  color: rgb(35, 98, 137);
+  font-family: Tahoma, sans-serif;
+  position: relative;
+  bottom: -10px;
+opacity: 0;
+}

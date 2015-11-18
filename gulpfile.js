@@ -22,6 +22,9 @@ gulp.task('lib', function() {
     return gulp.src([
         config.bowerDir + '/jquery/dist/jquery.js',
         config.bowerDir + '/bootstrap-sass/assets/javascripts/bootstrap.js',
+        config.bowerDir + '/angular/angular.js',
+        config.bowerDir + '/angular-resource/angular-resource.js',
+        config.bowerDir + '/lodash/lodash.js',
         config.bowerDir + '/requirejs/require.js'
     ]).pipe(uglify()).pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(config.publicPath + '/js/lib/'));

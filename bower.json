@@ -22,5 +22,10 @@
     "test",
     "tests"
   ],
-  "homepage": "https://github.com/deein/best-practice-project"
+  "homepage": "https://github.com/deein/best-practice-project",
+  "devDependencies": {
+    "angular": "~1.4.7",
+    "lodash": "~3.10.1",
+    "angular-resource": "~1.4.7"
+  }
 }
