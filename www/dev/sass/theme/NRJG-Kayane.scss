@@ -1,0 +1,139 @@
+// Variables
+$bg-image: '../images/themes/NRJG-Kayane/bg.jpg';
+$font-size-hash: 100px;
+$name-color: #000;
+$text-color: #000;
+$box-padding: 15px;
+
+// Body
+body{
+  background: url($bg-image);
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main{
+  font-size: 20px;
+  .widget {
+    position: absolute;
+    width: 100%;
+    padding: $box-padding;
+    li{
+      width:40%;
+      &.tweet {
+        position:relative;
+        background: rgb(255, 255, 255);
+        padding: $box-padding;
+        margin-bottom: 10px;
+        @include box-shadow(rgba(#000, .1) 5px 5px 1px 0);
+        .user{
+          .user-name {
+            height:28px;
+            color: $name-color;
+            font-weight:400;
+          }
+          .user-screen-name {
+            font-size: 14px;
+            height:20px;
+            font-weight: 300;
+            color: lighten($text-color, 50%);
+          }
+          .user-profile-image {
+            float: left;
+            margin-right: 10px;
+            border-radius: 3px;
+          }
+        }
+        .content {
+          color: $text-color;
+          margin-top: 30px;
+          margin-bottom: 5px;
+          line-height: 26px;
+          font-weight: 300;
+          a{
+            color: rgb(35, 98, 137);
+            text-decoration: none;
+          }
+          .media-img {
+            margin-top: 15px;
+            width: 100%;
+            border-radius: 3px;
+          }  
+        }
+        .when {
+          position:absolute;
+          top: 25px;
+          right: 20px;
+          text-align: right;
+          color: #a5a5a5;
+          font-weight: 300;
+        }   
+        .bottom{    
+          margin-top:15px;
+          padding-top:15px;
+          border-top: 1px solid rgba(#000, .1);
+          text-align:right; 
+          .fav, .rt{
+            display: inline;
+            color: rgb(35, 98, 137);
+            position: relative;
+          }
+        }
+      }
+    }
+  }
+  .pip-wrapper{
+    position:fixed;
+    width: 60%;
+    height:100%;
+    left:40%;
+    overflow:hidden;
+    @include display-flex;
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-direction(column);
+    .pip{
+      position: relative;
+      margin:0 auto;
+      width:1000px;
+      height:563px;   
+      background:black;
+      box-shadow: 0px 0px 5px rgba(0,0,0,1);   
+      @include display-flex;
+      @include align-items(center);
+      @include justify-content(center);
+      @include flex-direction(column);
+    }
+    .showBanned{
+      h4{color:white;}
+    }
+    .hashtag{
+      margin-top:40px;
+      text-align:center;
+      text-transform: uppercase;
+      @include text-shadow(rgba(#000, .3) 0 0 1px);
+      h1{
+        color:white;
+        font-size: $font-size-hash;
+        font-weight: bold;
+        line-height: $font-size-hash / 2;
+      }
+      h6{
+        color:white;
+        font-size: $font-size-hash / 5;
+      }
+    }
+  }
+}
+
+.animate-enter, .animate-leave {
+transition: 500ms ease-in all;
+position: relative;
+display: block;
+} 
+.animate-enter.animate-enter-active, .animate-leave {
+left: 0;
+}
+.animate-leave.animate-leave-active, .animate-enter {
+left: 500px;
+}

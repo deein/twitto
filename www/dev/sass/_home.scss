@@ -1,3 +1,29 @@
-body{
+html, body{
 	background: $body-bg;
+	overflow: hidden;
+	height:100%;
+	cursor:none;
+}
+
+.main{
+	overflow:hidden;
+	height:100%;
+}
+
+.widget{
+	overflow:auto;
+	cursor:none;
+	height:100%;
+	@include box-sizing(content-box);
+	a{
+		cursor:none;
+	}
+}
+
+.pip{
+	cursor:pointer;
+}
+
+textarea {
+    resize: none;
 }

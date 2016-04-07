@@ -6,7 +6,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Twitto</title>
         <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/fifa.css">
         <link rel="author" href="humans.txt">
         <script src="js/lib/angular.js"></script>
         <script src="js/lib/angular-resource.js"></script>
@@ -14,12 +13,13 @@
     </head>
     <body ng-controller="MainController">
         <div class="main">
-            <ul id="widget" ng-cloak>
-                <li class="tweet" ng-repeat="tweet in tweets">
+            <!-- Feed twitter -->
+            <ul class="list-unstyled widget" ng-cloak>
+                <li class="tweet" ng-animate="'animate'" ng-repeat="tweet in tweets">
                     <div class="user">
                         <img class="user-profile-image" ng-src="{{tweet.user.profile_image_url}}">
-                        <span class="user-name">{{tweet.user.name}}</span>
-                        <span class="user-screen-name">@{{tweet.user.screen_name}}</span>
+                        <div class="user-name">{{tweet.user.name}}</div>
+                        <div class="user-screen-name">@{{tweet.user.screen_name}}</div>
                     </div>
                     <div class="content">
                         <div class="text" ng-bind-html="tweet.text"></div>
@@ -29,28 +29,39 @@
                     </div>
                     <div class="meta">
                         <div class="when" ng-bind-html="tweet.when"></div>
-                        <div class="rt"> <i class="fa fa-retweet"></i> {{tweet.retweet_count}}</div>
-                        <div class="fav"> <i class="fa fa-star"></i> {{tweet.favorite_count}}</div>
+                        <div class="bottom">
+                            <div class="rt"><i class="fa fa-retweet"></i> {{tweet.retweet_count}}</div>
+                            <div class="fav"><i class="fa fa-star"></i> {{tweet.favorite_count}}</div>
+                        </div>
                     </div>
                 </li>
             </ul>
+            <!-- Video -->
             <div class="pip-wrapper">
                 <div class="pip">
-                    <div id="controls" ng-hide="searching">
-                        <input type="text" ng-model="query" placeholder="#gamequest">
-                        <button ng-click="search()">Commencer la recherche</button>
-                    </div>
-                    <div id="stop" ng-show="searching">
-                        <button ng-click="stopSearch()">Arrêter la recherche</button>
-                    </div>
-                    <div id="showBanned" ng-init="bannedButtonMessage='Montrer'">
-                        <br>
-                        <button ng-click="showBanned = !showBanned; bannedButtonMessage = showBanned ? 'Cacher' : 'Montrer'">{{bannedButtonMessage}} les comptes bannis</button><br>
-                        <textarea ng-model="banned" ng-show="showBanned"></textarea>
-                    </div>
+                    <form class="col-md-6">
+                        <div class="field-search">
+                            <div class="form-group">
+                                <div class="input-group">
+                                <input class="form-control" type="text" ng-model="query" placeholder="#fifa16">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-block btn-default">
+                                        <span style="display:block;" ng-hide="searching" ng-click="search()">Commencer la recherche</span>
+                                        <span style="display:block;" ng-show="searching" ng-click="stopSearch()"><i class="fa fa-spinner fa-pulse fa-fw"></i> Arrêter la recherche</span>
+                                    </button>
+                                </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showBanned">
+                            <h4>Bannir un compte (sans le @ et séparé par un espace) :</h4>
+                            <textarea class="form-control" ng-model="banned" rows="10"></textarea>
+                        </div>
+                    </form>
                 </div>
                 <div class="hashtag">
-                    <img src="images/riolofut16.png" alt="">
+                    <h6 style="font-size:30px;">Réagissez sur</h6>
+                    <h1 style="font-size:40px;">#KSO</h1>
                 </div>
             </div>
         </div>

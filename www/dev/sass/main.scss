@@ -4,7 +4,10 @@
 @import 'variables';
 // Bootstrap
 @import '../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap';
+// Font Awesome
+@import '../../../bower_components/font-awesome/scss/font-awesome';
 // Desktop
 @import 'home';
-// Responsives
-@import '_home-responsive'
+// Theme
+// @import 'theme/EAS-Riolo';
+@import 'theme/NRJG-Kayane';
